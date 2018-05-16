@@ -34,6 +34,20 @@
 				<param name="actionName">listAction</param>
 			</result>
 		</action>
+		
+		<!-- 게시판 수정 액션 -->
+		<action name="modifyForm" class="board.viewAction">
+			<result type="chain">writeForm</result>
+		</action>
+		
+		<action name="modifyAction" class="board.modifyAction">
+			<result type="chain">viewAction</result>
+		</action>
+		
+		<!-- 게시판 삭제 액션 -->
+		<action name="deleteAction" class="board.deleteAction">
+			<result type="chain">listAction</result>
+		</action>
 
 </package>
 
